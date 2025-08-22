@@ -80,7 +80,7 @@ async def forward_messages(message: Message, bot: Bot):
         pass
 
 async def main():
-    bot = Bot("7861112807:AAEVpi_mPRoJemJgvO4GI7BNHuPIw201mQY")
+    bot = Bot("token")
     await bot.set_my_description("Suhbaddosh Bot — Odamlarni anonim tarzda bogʻlaydigan suhbatdosh topuvchi Telegram bot")
     await bot.set_my_commands(
         [types.BotCommand(command="/start", description="Botni ishga tushirish")],
