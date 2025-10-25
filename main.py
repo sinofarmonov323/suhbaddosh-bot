@@ -15,7 +15,6 @@ paired_users = {}
 async def start(message: Message):
     await message.answer(f"Salom {message.from_user.full_name}\nmen sizga Suhbaddosh topib beruvchi botman", reply_markup=send_main_buttons())
 
-# === 🔍 User presses "Search People" ===
 @dp.message(F.text == "Qidirish")
 async def handle_search(message: Message, bot: Bot):
     user_id = message.from_user.id
@@ -56,8 +55,6 @@ async def handle_stop(message: Message, bot: Bot):
         await message.answer("Qidirish to'xtatildi")
         return
 
-    # await message.answer("")
-
 @dp.message()
 async def forward_messages(message: Message, bot: Bot):
     user_id = message.from_user.id
@@ -76,7 +73,6 @@ async def forward_messages(message: Message, bot: Bot):
         else:
             await message.answer("❗ bot bu turdagi xabarlarni qo'llab quvvatlamaydi .")
     else:
-        # await message.answer("")
         pass
 
 async def main():
